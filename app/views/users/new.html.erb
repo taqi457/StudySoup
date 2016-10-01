@@ -1,2 +1,10 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<div class="row">
+  <div class="signup medium-8 medium-offset-2 medium-8 small-12 columns">
+    <h3>Signup</h3>
+    <%= form_for(:user, :url => {:controller => 'users', :action => 'create'}) do |f| %>
+      <p> Username:</br> <%= f.text_field :username%> </p>
+      <p> Password:</br> <%= f.password_field :password%></p>
+      <%= f.submit :Signup, :class => 'submit-button' %>
+    <% end %>
+  </div>
+</div>
