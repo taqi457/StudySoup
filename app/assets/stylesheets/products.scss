@@ -1,0 +1,99 @@
+// Place all the styles related to the assignment controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// @import "foundation_and_overrides";
+@import "mixins";
+@import "font-awesome";
+@import "variables";
+
+.hide {
+  visibility: hidden;
+}
+
+.soup-thumbnail{
+  color: $baseColor;
+  background: $cardColor;
+  border-radius: 4px;
+  margin-top:10px;
+  cursor: pointer;
+  @include box-shadow(0px,0px,8px,rgba(50,50,50,.3));
+  .thumbnail-content {
+    .user {
+      color: $headingColor;
+      padding: 5px 8px;
+      display: inline-block;
+      width: 100%;
+      .user-image {
+        float: left;
+        width: 30%;
+        padding-right:5px;
+        .th {
+          width:50px;
+          height:50px;
+          border-radius: 50%;
+        }
+      }
+      .description {
+        float: left;
+        // display: inline-block;
+        width: 70%;
+        p {
+            text-align: left;
+            margin: 0;
+            margin-bottom: 3px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;
+            &.name {
+              font-weight: $fontHeavy;
+            }
+            &.verified {
+              font-size: 13px;
+              font-weight: $fontLight;
+            }
+        }
+      }
+    }
+    .rating {
+      // border-top: 2px solid $lightGray;
+      // border-bottom: 2px solid $lightGray;
+      @include box-shadow(0px,0px,3px,rgba(50,50,50,.3));
+      text-align: center;
+      padding: 8px 0px;
+      .fa-star {
+        font-size: 16px;
+        color: $lightGray;
+        &.filled {
+          color: $green;
+        }
+      }
+    }
+    .thumbnail-name {
+      color: $headingColor;
+      padding: 5px 8px;
+      p {
+        margin:0;
+        margin-bottom: 3px;
+        font-weight: $fontHeavy;
+      }
+      p.subject {
+        text-transform: uppercase;
+        font-weight: $fontHeavy;
+      }
+    }
+    .product-image {
+      .th {
+        max-height: 12em;
+        width:100%;
+        @include box-shadow(0px,0px,3px,rgba(50,50,50,.3));
+      }
+    }
+  }
+  .thumbnail-description {
+    color: $baseColor;
+    height: 366px;
+    padding: 5px 8px;
+  }
+}

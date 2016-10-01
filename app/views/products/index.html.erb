@@ -1,0 +1,42 @@
+<div class="row">
+  <% @thumbnails.each  do |thumbnails| %>
+  <a href="some/link">
+    <div class="small-12 medium-3 large-4 columns">
+      <div class="soup-thumbnail large-8 large-offset-2">
+        <div class="thumbnail-content">
+          <div class="thumbnail-name">
+            <p>
+              <i class="fa fa-book"></i>
+              Course Notes - Week 7</p>
+            <p class="subject">bio - 101 </p>
+          </div>
+          <div class="product-image">
+            <%= image_tag "textImage.jpg", :class => "th"  %>
+          </div>
+          <div class="rating">
+            <i class="fa fa-star filled"></i>
+            <i class="fa fa-star filled"></i>
+            <i class="fa fa-star filled"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+          </div>
+          <div class="user">
+          <div class="user-image">
+            <%= image_tag "userImage.png", :class => "th"  %>
+          </div>
+          <div class="description">
+            <p class="name">Rachel Carrol</p>
+            <p class="verified">Verified Elite Notetaker</p>
+          </div>
+        </div>
+        </div>
+        <div class="thumbnail-description hide">
+          <p>
+            Lorem ipsum...
+          </p>
+        </div>
+      </div>
+    </div>
+  </a>
+  <% end %>
+</div>
