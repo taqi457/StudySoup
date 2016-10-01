@@ -8,7 +8,11 @@ class UsersController < ApplicationController
       @user = User.new
       @user.username = params[:user][:username]
       @user.password = params[:user][:password]
-      @user.save
+      if @user.save
+        redirect_to url_for(:controller => :products, :action => :index)
+      else
+        # do nothing ? 
+      end
     end
 
 end

@@ -9,3 +9,9 @@
     box-shadow: $top $left $blur $color;
   }
 }
+
+@mixin text-overflow() {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}

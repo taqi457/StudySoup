@@ -2,14 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
 .soup-thumbnail{
   color: $baseColor;
   background: $cardColor;
   border-radius: 4px;
   margin-top:10px;
   cursor: pointer;
-  @include box-shadow(0px,0px,8px,rgba(50,50,50,.3));
+  min-height: $thumbnailHeight;
+  @include box-shadow(0px,0px,8px,$shadowColor);
   &:hover {
     .thumbnail-content {
       display: none;
@@ -21,7 +21,7 @@
   .thumbnail-content {
     .user {
       color: $headingColor;
-      padding: 5px 8px;
+      padding: $thumbnailPadding;
       display: inline-block;
       width: 100%;
       .user-image {
@@ -42,15 +42,13 @@
             text-align: left;
             margin: 0;
             margin-bottom: 3px;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            white-space: nowrap;
             width: 100%;
+            @include text-overflow();
             &.name {
               font-weight: $fontHeavy;
             }
             &.verified {
-              font-size: 13px;
+              font-size: $fontSmall;
               font-weight: $fontLight;
             }
         }
@@ -59,11 +57,11 @@
     .rating {
       // border-top: 2px solid $lightGray;
       // border-bottom: 2px solid $lightGray;
-      @include box-shadow(0px,0px,3px,rgba(50,50,50,.3));
+      @include box-shadow(0px,0px,3px,$shadowColor);
       text-align: center;
       padding: 8px 0px;
       .fa-star {
-        font-size: 16px;
+        font-size: $fontLarge;
         color: $lightGray;
         &.filled {
           color: $green;
@@ -72,7 +70,7 @@
     }
     .thumbnail-name {
       color: $headingColor;
-      padding: 5px 8px;
+      padding: $thumbnailPadding;
       p {
         margin:0;
         margin-bottom: 3px;
@@ -87,14 +85,13 @@
       .th {
         max-height: 12em;
         width:100%;
-        @include box-shadow(0px,0px,3px,rgba(50,50,50,.3));
+        @include box-shadow(0px,0px,3px,$shadowColor);
       }
     }
   }
   .thumbnail-description {
     display: none;
     color: $baseColor;
-    height: 366px;
-    padding: 5px 8px;
+    padding: $thumbnailPadding;
   }
 }

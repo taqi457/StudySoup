@@ -6,4 +6,4 @@ $ ->
     $('.soup-thumbnail').click (event) ->
       event.preventDefault()
       $(this).css('background', 'gray')
-      window.location.href = 'names/list'
+      window.location.href = '/names/list'
