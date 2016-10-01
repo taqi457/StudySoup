@@ -18,6 +18,14 @@
   margin-top:10px;
   cursor: pointer;
   @include box-shadow(0px,0px,8px,rgba(50,50,50,.3));
+  &:hover {
+    .thumbnail-content {
+      display: none;
+    }
+    .thumbnail-description {
+      display: block;
+    }
+  }
   .thumbnail-content {
     .user {
       color: $headingColor;
@@ -92,6 +100,7 @@
     }
   }
   .thumbnail-description {
+    display: none;
     color: $baseColor;
     height: 366px;
     padding: 5px 8px;
